@@ -1,0 +1,21 @@
+{
+  "name": "engraver",
+  "version": "1.0.0",
+  "description": "Engraver",
+  "main": "dist/bundle.js",
+  "repository": "https://github.com/alexbasson/engraver.git",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  }
+}
