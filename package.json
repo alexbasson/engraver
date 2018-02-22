@@ -6,6 +6,8 @@
   "repository": "https://github.com/alexbasson/engraver.git",
   "scripts": {
     "build": "webpack",
+    "lint": "tslint --project .",
+    "lint-fix": "tslint --project . --fix",
     "start": "webpack-dev-server --open",
     "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine"
   },
@@ -16,6 +18,7 @@
     "@types/jasmine": "latest",
     "jasmine": "latest",
     "ts-loader": "latest",
+    "tslint": "latest",
     "typescript": "latest",
     "webpack": "latest",
     "webpack-dev-server": "latest"

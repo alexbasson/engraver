@@ -1,0 +1,18 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {
+      "quotemark": [true, "single", "avoid-escape"],
+      "semicolon": [true, "never"],
+      "trailing-comma": false
+    },
+    "rules": {
+      "member-access": [true, "no-public"],
+      "quotemark": [true, "single", "avoid-escape"],
+      "semicolon": [true, "never"],
+      "trailing-comma": false
+    },
+    "rulesDirectory": []
+}
