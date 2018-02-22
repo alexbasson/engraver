@@ -7,12 +7,14 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jasmine": "latest",
+    "jasmine": "latest",
     "ts-loader": "latest",
     "typescript": "latest",
     "webpack": "latest",
