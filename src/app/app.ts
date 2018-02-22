@@ -1,5 +1,5 @@
 export class App {
-  constructor(private ctx: CanvasRenderingContext2D) {}
+  constructor(private readonly ctx: CanvasRenderingContext2D) {}
 
   render() {
     this.ctx.fillStyle = 'rgb(100, 0, 0)'
