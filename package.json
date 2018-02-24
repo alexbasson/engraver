@@ -16,7 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "latest",
+    "css-loader": "latest",
     "jasmine": "latest",
+    "style-loader": "latest",
     "ts-loader": "latest",
     "tslint": "latest",
     "typescript": "latest",

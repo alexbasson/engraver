@@ -1,4 +1,5 @@
 import {Page} from './app/page'
+import './style.css'
 
 const CANVAS_HEIGHT = 2000
 
