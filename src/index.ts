@@ -8,7 +8,7 @@ const main = () => {
 
   const ctx = canvas.getContext('2d')
 
-  const staff = new App(ctx)
-  staff.render()
+  const score = new Score(ctx)
+  score.render()
 }
 main()
