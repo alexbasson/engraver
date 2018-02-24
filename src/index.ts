@@ -10,11 +10,17 @@ const main = () => {
 
   const ctx = canvas.getContext('2d')
 
-  const pageSize = {
-    width: canvas.width,
-    height: canvas.height
+  const pageRect = {
+    origin: {
+      x: 0,
+      y: 0
+    },
+    size: {
+      width: canvas.width,
+      height: canvas.height
+    }
   }
-  const page = new Page(ctx, pageSize)
+  const page = new Page(ctx, pageRect)
   page.render()
 }
 main()

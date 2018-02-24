@@ -1,13 +1,13 @@
 import {STAFF_HEIGHT, STAFF_SPACING} from '../constants'
 import {Staff} from './staff'
-import {Size} from './geometry'
+import {Rectangle} from './geometry'
 
 const MARGIN = 20
 
 export class Page {
   constructor(
     private readonly ctx: CanvasRenderingContext2D,
-    private readonly size: Size
+    private readonly rect: Rectangle
   ) {}
 
   private staffHeight = STAFF_HEIGHT + STAFF_SPACING
@@ -19,20 +19,21 @@ export class Page {
   }
 
   private generateStaves() {
-    const numberOfStaves = Math.floor(this.size.height / this.staffHeight)
-    const marginY = MARGIN + (this.size.height - numberOfStaves * this.staffHeight) / 2
+    const size = this.rect.size
+    const numberOfStaves = Math.floor(size.height / this.staffHeight)
+    const marginY = MARGIN + (size.height - numberOfStaves * this.staffHeight) / 2
     for (let index = 0; index < numberOfStaves; index++) {
-      const rectangle = {
+      const staffRect = {
         origin: {
-          x: MARGIN,
-          y: marginY + index * this.staffHeight
+          x: this.rect.origin.x + MARGIN,
+          y: this.rect.origin.y + marginY + index * this.staffHeight
         },
         size: {
-          width: this.size.width - 2 * MARGIN,
+          width: size.width - 2 * MARGIN,
           height: STAFF_HEIGHT
         }
       }
-      this.staves.push(new Staff(this.ctx, rectangle))
+      this.staves.push(new Staff(this.ctx, staffRect))
     }
   }
 }
